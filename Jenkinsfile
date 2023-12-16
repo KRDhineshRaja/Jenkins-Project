@@ -21,20 +21,19 @@ pipeline {
         }
       }
     }
+    
+  }
 
-    post{
+post{
       always{
             sh 'docker rm -f mypycont'
             sh 'docker run --name mypycont -d -p 3000:5000 my-flask'
-            emailext to: "dhinesh.best95@gmail.com",
+            emailext to: "yasmin@guvi.in",
             subject: "Notification mail from jenkins",
             body: "CiCd pipeline"
         }
+}
 
-  }
-
-
-  }
 }
 
              
