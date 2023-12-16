@@ -30,7 +30,7 @@ pipeline {
             subject: "Notification mail from jenkins",
             body: "CiCd pipeline"
         }
-}
+
   }
 
 
